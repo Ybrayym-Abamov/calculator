@@ -1,6 +1,6 @@
 # Vanilla JS built calculator!
 
-This calculator is build purely with Vanilla JavaScript by utilizing the modern ES6 syntax and classes.
+This calculator is built purely by Vanilla JavaScript and utilization of the modern ES6 syntax and classes.
 
 # Contributing
 
