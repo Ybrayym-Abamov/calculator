@@ -2,7 +2,7 @@
 
 This calculator is built purely by Vanilla JavaScript and utilization of the modern ES6 syntax and classes.
 
-![alt text](https://github.com/Ybrayym-Abamov/calculator/blob/master/resources/calculator.png =400x400)
+<img src="https://github.com/Ybrayym-Abamov/calculator/blob/master/resources/calculator.png" width="400" height="400"/>
 
 # Contributing
 
