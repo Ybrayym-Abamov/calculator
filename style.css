@@ -1,0 +1,189 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(37, 43, 116);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    place-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 5px;
+}
+
+.calculator-grid button {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgb(90, 90, 90);
+    outline: none;
+    background-color: rgb(37, 43, 116);
+    color: rgb(155, 153, 153);
+    font-size: 2rem;
+}
+
+.calculator-grid button:nth-child(3) {
+    grid-area: 2 / 1;
+}
+
+.calculator-grid button:nth-child(4) {
+    grid-area: 2 / 1;
+}
+
+.calculator-grid button:nth-child(5) {
+    background-color: rgb(223, 208, 6);
+    font-size: 3rem;
+    color: rgb(37, 43, 116);
+}
+
+.calculator-grid button:nth-child(6) {
+    background-color: rgb(223, 208, 6);
+    font-size: 3rem;
+    color: rgb(37, 43, 116);
+}
+
+.calculator-grid button:nth-child(10) {
+    background-color: rgb(223, 208, 6);
+    font-size: 3rem;
+    color: rgb(37, 43, 116);
+}
+
+.calculator-grid button:nth-child(14) {
+    background-color: rgb(223, 208, 6);
+    font-size: 3rem;
+    color: rgb(37, 43, 116);
+}
+
+.calculator-grid button:nth-child(18) {
+    background-color: rgb(223, 208, 6);
+    font-size: 3rem;
+    border-radius: 50px;
+    color: rgb(37, 43, 116);
+}
+
+.calculator-grid button:nth-child(19) {
+    border-radius: 50px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.v-span-two {
+    grid-row: span 2;
+}
+
+.calculator-grid > button:hover {
+    border: 1px solid yellow;
+}
+
+
+.display-screen {
+    grid-area: 1 / 1 / 1 / 5;
+    background-color: rgb(37, 43, 116);
+    height: 100%;
+    width: 100%;
+    color: rgb(155, 153, 153);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display-screen .previous-operand {
+    font-size: 1rem;
+}
+
+.display-screen .current-operand {
+    font-size: 3rem;
+}
+
+.display-screen .parent-ham {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 370px;
+    margin-bottom: 85px;
+    z-index: 1;
+    transition: all .1s ease-in-out;
+}
+
+.display-screen .parent-ham .hamburger-line-one {
+    transition: all .1s ease-in-out;
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+.display-screen .parent-ham .hamburger-line-two {
+    transition: all .1s ease-in-out;
+    transform: translateY(10px);
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+.display-screen .parent-ham .hamburger-line-three {
+    transition: all .1s ease-in-out;
+    transform: translateY(20px);
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+/* ANIMATION */
+.display-screen .parent-ham.open .hamburger-line-one {
+    transform: rotate(45deg) translate(12px, 12px);
+}
+
+.display-screen .parent-ham.open .hamburger-line-two {
+    opacity: 0;
+}
+
+.display-screen .parent-ham.open .hamburger-line-three {
+    transform: rotate(-45deg) translate(-10px, 9px);
+}
+
+.ham-links {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    margin-right: 60px;
+    visibility: hidden;
+}
+
+.display-screen .ham-links li a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+.display-screen .ham-links li a:hover {
+    color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+    .display-screen .ham-links li a {
+        font-size: 13px;
+    }
+
+    .ham-links {
+        margin-bottom: 95px;
+    }
+}
