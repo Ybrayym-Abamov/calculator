@@ -2,6 +2,7 @@
 
 This calculator is built purely by Vanilla JavaScript and utilization of the modern ES6 syntax and classes.
 
+![alt text](https://github.com/Ybrayym-Abamov/calculator/blob/master/resources/calculator.png)
 
 # Contributing
 
