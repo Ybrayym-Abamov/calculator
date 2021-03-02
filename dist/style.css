@@ -114,7 +114,6 @@ body {
 }
 
 .display-screen .parent-ham {
-    display: inline-block;
     position: absolute;
     cursor: pointer;
     width: 30px;
